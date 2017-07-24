@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head lang='en'>
+    {{template "_head" .}}
+</head>
+
+<body class="bg-invisiblellama">
+	<nav class="navbar navbar-inverse bg-invisiblellama navbar-invisiblellama">
+		<h1 class="navbar-brand mb-0">
+			<button class="btn btn-outline-invisiblellama float-right" onclick="$.startGame();">New Game</button>
+			<a href="/"><img src="resources/images/il-logo-80.png"/></a>
+		</h1>
+	</nav>
+
+	<div class="container-fluid">
+	  <noscript>
+	      <div class='alert alert-invisiblellama'>
+	          <h4 class='alert-heading'>Warning!</h4>
+	          You don't have Javascript enabled. Please enable Javascript to use this site.
+	      </div>
+	  </noscript>
+
+	</div>
+	<div class="container-fluid">
+		{{template "_lines" .}}
+	</div>
+
+		<footer class="footer-invisiblellama">
+			<div class="container-fluid">
+				<div clas="container">
+					<div class="row">
+						<div class="col text-muted">
+							&copy; 2008 - {{.year}} Invisible Llama
+						</div>
+						<div class="col text-right">
+							<a href="http://syrec.io" class="text-muted" target="_blank">Contact</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+</body>
+
+<script>
+    $(function () {
+      $('#container_script_enabled').show();
+
+      // init
+      $.initGame();
+    });
+</script>

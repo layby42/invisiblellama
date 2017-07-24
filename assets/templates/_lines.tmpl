@@ -1,0 +1,19 @@
+{{define "_lines"}}
+<div class="board-invisiblellama">
+	<div id="over-invisiblellama" class="text-white">Game is over</div>
+	<div id="score-invisiblellama" class="text-white text-right"></div>
+	<table id="table-invisiblellama">
+		<tbody>
+			{{ range $y, $row := .board}}
+				<tr class="row-invisiblellama {{if eq $y 0}} top-border {{end}}">
+					{{ range $x, $cell := $row }}
+						<td id="cell-{{$cell}}" class="cell-invisiblellama {{if eq $x 0}} left-border {{end}}">
+							<div class="empty"></div>
+						</td>
+					{{ end }}
+				</tr>
+			{{ end }}
+		</tbody>
+	</table>
+</div>
+{{end}}

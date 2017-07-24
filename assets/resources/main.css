@@ -1,0 +1,108 @@
+.navbar-invisiblellama {
+	border-bottom: 1px solid rgb(42, 97, 125) !important;
+}
+
+.footer-invisiblellama{
+	border-top: 1px solid rgb(19, 58, 78) !important;
+	padding-top: 20px;
+}
+
+.footer-invisiblellama .text-muted, .alert-invisiblellama {
+	color: rgb(42, 97, 125) !important;
+}
+
+.footer-invisiblellama a.text-muted:hover, .footer-invisiblellama a.text-muted:focus {
+	color: #ffffff !important;
+}
+
+.bg-invisiblellama {
+	background-color: rgb(10, 33, 45) !important;
+}
+
+.board-invisiblellama {
+	width: 399px;
+	padding: 5px 0;
+	margin: 20px auto;
+	position: relative;
+}
+
+table#table-invisiblellama {
+	border-collapse: collapse;
+	margin: 0 auto;
+}
+
+.row-invisiblellama {
+	border-bottom: 1px solid #2a617d;
+}
+
+.cell-invisiblellama {
+	border-right: 1px solid #2a617d;
+	height: 42px;
+	width: 42px;
+}
+
+.top-border {
+	border-top: 1px solid #2a617d;
+}
+
+.left-border {
+	border-left: 1px solid #2a617d;
+}
+
+td.cell-invisiblellama > div.empty {
+	height: 40px;
+	width: 40px;
+	position: relatlive;
+	top: 0;
+	left: 0;
+}
+
+
+td.cell-invisiblellama > img.token {
+	border-radius: 20px;
+	height: 40px;
+	width: 40px;
+	position: relatlive;
+	top: 0;
+	left: 0;
+}
+
+td.cell-invisiblellama > img.selected {
+	border-radius: 22px;
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    text-align: center;
+}
+
+#score-invisiblellama {
+	font-size: 2rem;
+	padding: 0 5px;
+}
+
+#over-invisiblellama{
+	display: none;
+	position: absolute;
+	height: 399px;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 100;
+	background-color: rgba(28, 59, 82, 0.5);
+	text-align: center;
+	font-size: 2rem;
+	padding-top: 45%;
+	border-radius: 3px;
+}
+
+.btn-outline-invisiblellama{
+	color: #2a617d;
+	background-image: none;
+	background-color: transparent;
+	border-color: #2a617d;
+}
+
+.btn-outline-invisiblellama:focus, .btn-outline-invisiblellama:hover{
+	color: #ffffff;
+	background-image: none;
+	background-color: transparent;
+	border-color: #ffffff;
+}
