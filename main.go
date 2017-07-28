@@ -37,6 +37,7 @@ func newRender() render.HTMLRender {
 
 func registerRoutes() *gin.Engine {
 	r := gin.Default()
+	r.Use(Minifier())
 	r.HTMLRender = newRender()
 
 	r.GET("/", func(c *gin.Context) {
