@@ -8,6 +8,7 @@
 // assets/resources/images/default/token4.png
 // assets/resources/images/default/token5.png
 // assets/resources/images/default/token6.png
+// assets/resources/images/empty.png
 // assets/resources/images/icon-lines.png
 // assets/resources/images/icon.png
 // assets/resources/images/il-logo-80.png
@@ -45,7 +46,7 @@ type asset struct {
 
 // assetsResourcesFaviconIco reads file data from disk. It returns an error on failure.
 func assetsResourcesFaviconIco() (*asset, error) {
-	path := "/home/dg/go/src/github.com/layby42/invisiblellama/assets/resources/favicon.ico"
+	path := "/home/og/Go/src/github.com/layby42/invisiblellama/assets/resources/favicon.ico"
 	name := "assets/resources/favicon.ico"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -63,7 +64,7 @@ func assetsResourcesFaviconIco() (*asset, error) {
 
 // assetsResourcesImagesDefaultToken0Png reads file data from disk. It returns an error on failure.
 func assetsResourcesImagesDefaultToken0Png() (*asset, error) {
-	path := "/home/dg/go/src/github.com/layby42/invisiblellama/assets/resources/images/default/token0.png"
+	path := "/home/og/Go/src/github.com/layby42/invisiblellama/assets/resources/images/default/token0.png"
 	name := "assets/resources/images/default/token0.png"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -81,7 +82,7 @@ func assetsResourcesImagesDefaultToken0Png() (*asset, error) {
 
 // assetsResourcesImagesDefaultToken1Png reads file data from disk. It returns an error on failure.
 func assetsResourcesImagesDefaultToken1Png() (*asset, error) {
-	path := "/home/dg/go/src/github.com/layby42/invisiblellama/assets/resources/images/default/token1.png"
+	path := "/home/og/Go/src/github.com/layby42/invisiblellama/assets/resources/images/default/token1.png"
 	name := "assets/resources/images/default/token1.png"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -99,7 +100,7 @@ func assetsResourcesImagesDefaultToken1Png() (*asset, error) {
 
 // assetsResourcesImagesDefaultToken2Png reads file data from disk. It returns an error on failure.
 func assetsResourcesImagesDefaultToken2Png() (*asset, error) {
-	path := "/home/dg/go/src/github.com/layby42/invisiblellama/assets/resources/images/default/token2.png"
+	path := "/home/og/Go/src/github.com/layby42/invisiblellama/assets/resources/images/default/token2.png"
 	name := "assets/resources/images/default/token2.png"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -117,7 +118,7 @@ func assetsResourcesImagesDefaultToken2Png() (*asset, error) {
 
 // assetsResourcesImagesDefaultToken3Png reads file data from disk. It returns an error on failure.
 func assetsResourcesImagesDefaultToken3Png() (*asset, error) {
-	path := "/home/dg/go/src/github.com/layby42/invisiblellama/assets/resources/images/default/token3.png"
+	path := "/home/og/Go/src/github.com/layby42/invisiblellama/assets/resources/images/default/token3.png"
 	name := "assets/resources/images/default/token3.png"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -135,7 +136,7 @@ func assetsResourcesImagesDefaultToken3Png() (*asset, error) {
 
 // assetsResourcesImagesDefaultToken4Png reads file data from disk. It returns an error on failure.
 func assetsResourcesImagesDefaultToken4Png() (*asset, error) {
-	path := "/home/dg/go/src/github.com/layby42/invisiblellama/assets/resources/images/default/token4.png"
+	path := "/home/og/Go/src/github.com/layby42/invisiblellama/assets/resources/images/default/token4.png"
 	name := "assets/resources/images/default/token4.png"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -153,7 +154,7 @@ func assetsResourcesImagesDefaultToken4Png() (*asset, error) {
 
 // assetsResourcesImagesDefaultToken5Png reads file data from disk. It returns an error on failure.
 func assetsResourcesImagesDefaultToken5Png() (*asset, error) {
-	path := "/home/dg/go/src/github.com/layby42/invisiblellama/assets/resources/images/default/token5.png"
+	path := "/home/og/Go/src/github.com/layby42/invisiblellama/assets/resources/images/default/token5.png"
 	name := "assets/resources/images/default/token5.png"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -171,8 +172,26 @@ func assetsResourcesImagesDefaultToken5Png() (*asset, error) {
 
 // assetsResourcesImagesDefaultToken6Png reads file data from disk. It returns an error on failure.
 func assetsResourcesImagesDefaultToken6Png() (*asset, error) {
-	path := "/home/dg/go/src/github.com/layby42/invisiblellama/assets/resources/images/default/token6.png"
+	path := "/home/og/Go/src/github.com/layby42/invisiblellama/assets/resources/images/default/token6.png"
 	name := "assets/resources/images/default/token6.png"
+	bytes, err := bindataRead(path, name)
+	if err != nil {
+		return nil, err
+	}
+
+	fi, err := os.Stat(path)
+	if err != nil {
+		err = fmt.Errorf("Error reading asset info %s at %s: %v", name, path, err)
+	}
+
+	a := &asset{bytes: bytes, info: fi}
+	return a, err
+}
+
+// assetsResourcesImagesEmptyPng reads file data from disk. It returns an error on failure.
+func assetsResourcesImagesEmptyPng() (*asset, error) {
+	path := "/home/og/Go/src/github.com/layby42/invisiblellama/assets/resources/images/empty.png"
+	name := "assets/resources/images/empty.png"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
 		return nil, err
@@ -189,7 +208,7 @@ func assetsResourcesImagesDefaultToken6Png() (*asset, error) {
 
 // assetsResourcesImagesIconLinesPng reads file data from disk. It returns an error on failure.
 func assetsResourcesImagesIconLinesPng() (*asset, error) {
-	path := "/home/dg/go/src/github.com/layby42/invisiblellama/assets/resources/images/icon-lines.png"
+	path := "/home/og/Go/src/github.com/layby42/invisiblellama/assets/resources/images/icon-lines.png"
 	name := "assets/resources/images/icon-lines.png"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -207,7 +226,7 @@ func assetsResourcesImagesIconLinesPng() (*asset, error) {
 
 // assetsResourcesImagesIconPng reads file data from disk. It returns an error on failure.
 func assetsResourcesImagesIconPng() (*asset, error) {
-	path := "/home/dg/go/src/github.com/layby42/invisiblellama/assets/resources/images/icon.png"
+	path := "/home/og/Go/src/github.com/layby42/invisiblellama/assets/resources/images/icon.png"
 	name := "assets/resources/images/icon.png"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -225,7 +244,7 @@ func assetsResourcesImagesIconPng() (*asset, error) {
 
 // assetsResourcesImagesIlLogo80Png reads file data from disk. It returns an error on failure.
 func assetsResourcesImagesIlLogo80Png() (*asset, error) {
-	path := "/home/dg/go/src/github.com/layby42/invisiblellama/assets/resources/images/il-logo-80.png"
+	path := "/home/og/Go/src/github.com/layby42/invisiblellama/assets/resources/images/il-logo-80.png"
 	name := "assets/resources/images/il-logo-80.png"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -243,7 +262,7 @@ func assetsResourcesImagesIlLogo80Png() (*asset, error) {
 
 // assetsResourcesImagesIlLogoPng reads file data from disk. It returns an error on failure.
 func assetsResourcesImagesIlLogoPng() (*asset, error) {
-	path := "/home/dg/go/src/github.com/layby42/invisiblellama/assets/resources/images/il-logo.png"
+	path := "/home/og/Go/src/github.com/layby42/invisiblellama/assets/resources/images/il-logo.png"
 	name := "assets/resources/images/il-logo.png"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -261,7 +280,7 @@ func assetsResourcesImagesIlLogoPng() (*asset, error) {
 
 // assetsResourcesMainCss reads file data from disk. It returns an error on failure.
 func assetsResourcesMainCss() (*asset, error) {
-	path := "/home/dg/go/src/github.com/layby42/invisiblellama/assets/resources/main.css"
+	path := "/home/og/Go/src/github.com/layby42/invisiblellama/assets/resources/main.css"
 	name := "assets/resources/main.css"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -279,7 +298,7 @@ func assetsResourcesMainCss() (*asset, error) {
 
 // assetsResourcesMainJs reads file data from disk. It returns an error on failure.
 func assetsResourcesMainJs() (*asset, error) {
-	path := "/home/dg/go/src/github.com/layby42/invisiblellama/assets/resources/main.js"
+	path := "/home/og/Go/src/github.com/layby42/invisiblellama/assets/resources/main.js"
 	name := "assets/resources/main.js"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -297,7 +316,7 @@ func assetsResourcesMainJs() (*asset, error) {
 
 // assetsTemplates_headTmpl reads file data from disk. It returns an error on failure.
 func assetsTemplates_headTmpl() (*asset, error) {
-	path := "/home/dg/go/src/github.com/layby42/invisiblellama/assets/templates/_head.tmpl"
+	path := "/home/og/Go/src/github.com/layby42/invisiblellama/assets/templates/_head.tmpl"
 	name := "assets/templates/_head.tmpl"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -315,7 +334,7 @@ func assetsTemplates_headTmpl() (*asset, error) {
 
 // assetsTemplates_linesTmpl reads file data from disk. It returns an error on failure.
 func assetsTemplates_linesTmpl() (*asset, error) {
-	path := "/home/dg/go/src/github.com/layby42/invisiblellama/assets/templates/_lines.tmpl"
+	path := "/home/og/Go/src/github.com/layby42/invisiblellama/assets/templates/_lines.tmpl"
 	name := "assets/templates/_lines.tmpl"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -333,7 +352,7 @@ func assetsTemplates_linesTmpl() (*asset, error) {
 
 // assetsTemplatesIndexTmpl reads file data from disk. It returns an error on failure.
 func assetsTemplatesIndexTmpl() (*asset, error) {
-	path := "/home/dg/go/src/github.com/layby42/invisiblellama/assets/templates/index.tmpl"
+	path := "/home/og/Go/src/github.com/layby42/invisiblellama/assets/templates/index.tmpl"
 	name := "assets/templates/index.tmpl"
 	bytes, err := bindataRead(path, name)
 	if err != nil {
@@ -409,6 +428,7 @@ var _bindata = map[string]func() (*asset, error){
 	"assets/resources/images/default/token4.png": assetsResourcesImagesDefaultToken4Png,
 	"assets/resources/images/default/token5.png": assetsResourcesImagesDefaultToken5Png,
 	"assets/resources/images/default/token6.png": assetsResourcesImagesDefaultToken6Png,
+	"assets/resources/images/empty.png": assetsResourcesImagesEmptyPng,
 	"assets/resources/images/icon-lines.png": assetsResourcesImagesIconLinesPng,
 	"assets/resources/images/icon.png": assetsResourcesImagesIconPng,
 	"assets/resources/images/il-logo-80.png": assetsResourcesImagesIlLogo80Png,
@@ -473,6 +493,7 @@ var _bintree = &bintree{nil, map[string]*bintree{
 					"token5.png": &bintree{assetsResourcesImagesDefaultToken5Png, map[string]*bintree{}},
 					"token6.png": &bintree{assetsResourcesImagesDefaultToken6Png, map[string]*bintree{}},
 				}},
+				"empty.png": &bintree{assetsResourcesImagesEmptyPng, map[string]*bintree{}},
 				"icon-lines.png": &bintree{assetsResourcesImagesIconLinesPng, map[string]*bintree{}},
 				"icon.png": &bintree{assetsResourcesImagesIconPng, map[string]*bintree{}},
 				"il-logo-80.png": &bintree{assetsResourcesImagesIlLogo80Png, map[string]*bintree{}},

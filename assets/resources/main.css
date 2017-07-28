@@ -54,13 +54,12 @@ table#table-invisiblellama {
 	border-left: 1px solid #2a617d;
 }
 
-td.cell-invisiblellama > div.empty {
+td.cell-invisiblellama > img.empty {
 	height: 50px;
 	width: 50px;
 	position: relatlive;
 	top: 0;
 	left: 0;
-	cursor: pointer;
 }
 
 
@@ -136,7 +135,7 @@ td.cell-invisiblellama > img.selected {
 		width: 32px;
 	}
 
-	td.cell-invisiblellama > div.empty {
+	td.cell-invisiblellama > img.empty {
 		height: 30px;
 		width: 30px;
 	}
@@ -182,7 +181,7 @@ td.cell-invisiblellama > img.selected {
 		width: 42px;
 	}
 
-	td.cell-invisiblellama > div.empty {
+	td.cell-invisiblellama > img.empty {
 		height: 40px;
 		width: 40px;
 	}

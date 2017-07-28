@@ -7,8 +7,8 @@
 			{{ range $y, $row := .board}}
 				<tr class="row-invisiblellama {{if eq $y 0}} top-border {{end}}">
 					{{ range $x, $cell := $row }}
-						<td id="cell-{{$cell}}" class="cell-invisiblellama {{if eq $x 0}} left-border {{end}}">
-							<div class="empty"></div>
+						<td class="cell-invisiblellama {{if eq $x 0}} left-border {{end}}">
+							<img id="token-{{$cell}}" class="empty" src="../resources/images/empty.png"/>
 						</td>
 					{{ end }}
 				</tr>
