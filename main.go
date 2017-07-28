@@ -73,6 +73,7 @@ func registerRoutes() *gin.Engine {
 	r.StaticFS("/resources", &assetfs.AssetFS{
 		Asset: assets.Asset, AssetDir: assets.AssetDir, AssetInfo: assets.AssetInfo, Prefix: "assets/resources",
 	})
+	r.StaticFile("/icon-lines.png", string(assets.MustAsset("assets/resources/images/icon-lines.png")))
 	r.StaticFile("/favicon.ico", string(assets.MustAsset("assets/resources/favicon.ico")))
 
 	return r

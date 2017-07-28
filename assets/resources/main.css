@@ -1,10 +1,14 @@
+body {
+	min-width: 320px;
+}
 .navbar-invisiblellama {
 	border-bottom: 1px solid rgb(42, 97, 125) !important;
 }
 
 .footer-invisiblellama{
 	border-top: 1px solid rgb(19, 58, 78) !important;
-	padding-top: 20px;
+	padding: 20px 1rem;
+	font-size: 1rem;
 }
 
 .footer-invisiblellama .text-muted, .alert-invisiblellama {
@@ -20,7 +24,7 @@
 }
 
 .board-invisiblellama {
-	width: 399px;
+	width: 489px;
 	padding: 5px 0;
 	margin: 20px auto;
 	position: relative;
@@ -35,10 +39,11 @@ table#table-invisiblellama {
 	border-bottom: 1px solid #2a617d;
 }
 
+
 .cell-invisiblellama {
 	border-right: 1px solid #2a617d;
-	height: 42px;
-	width: 42px;
+	height: 52px;
+	width: 52px;
 }
 
 .top-border {
@@ -50,25 +55,26 @@ table#table-invisiblellama {
 }
 
 td.cell-invisiblellama > div.empty {
-	height: 40px;
-	width: 40px;
+	height: 50px;
+	width: 50px;
 	position: relatlive;
 	top: 0;
 	left: 0;
+	cursor: pointer;
 }
 
 
 td.cell-invisiblellama > img.token {
-	border-radius: 20px;
-	height: 40px;
-	width: 40px;
+	border-radius: 25px;
+	height: 50px;
+	width: 50px;
 	position: relatlive;
 	top: 0;
 	left: 0;
 }
 
 td.cell-invisiblellama > img.selected {
-	border-radius: 22px;
+	border-radius: 25px;
 	box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
     text-align: center;
 }
@@ -81,7 +87,7 @@ td.cell-invisiblellama > img.selected {
 #over-invisiblellama{
 	display: none;
 	position: absolute;
-	height: 399px;
+	height: 489px;
 	right: 0;
 	left: 0;
 	bottom: 0;
@@ -105,4 +111,94 @@ td.cell-invisiblellama > img.selected {
 	background-image: none;
 	background-color: transparent;
 	border-color: #ffffff;
+}
+
+@media (max-width: 575px) {
+	.navbar {
+		padding: 0.2rem 1rem;
+	}
+
+	h1.navbar-brand > a > img {
+		height: 27px;
+	}
+
+	.board-invisiblellama {
+		width: 307px;
+		margin: 10px auto;
+	}
+
+	div.container-fluid {
+		padding: 0 !important;
+	}
+
+	.cell-invisiblellama {
+		height: 32px;
+		width: 32px;
+	}
+
+	td.cell-invisiblellama > div.empty {
+		height: 30px;
+		width: 30px;
+	}
+
+	td.cell-invisiblellama > img.token {
+		border-radius: 15px;
+		height: 30px;
+		width: 30px;
+	}
+
+	td.cell-invisiblellama > img.selected {
+		border-radius: 15px;
+		box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+	}
+
+	#score-invisiblellama {
+		padding: 0 10px;
+	}
+
+	#over-invisiblellama{
+		height: 307px;
+	}
+
+	.btn-outline-invisiblellama{
+		padding: .25rem .5rem;
+		font-size: .8rem;
+		border-radius: .2rem;
+		margin-top: 5px;
+	}
+
+	footer.footer-invisiblellama {
+		font-size: 0.7rem;
+	}
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+	.board-invisiblellama {
+		width: 399px;
+	}
+
+	.cell-invisiblellama {
+		height: 42px;
+		width: 42px;
+	}
+
+	td.cell-invisiblellama > div.empty {
+		height: 40px;
+		width: 40px;
+	}
+
+	td.cell-invisiblellama > img.token {
+		border-radius: 20px;
+		height: 40px;
+		width: 40px;
+	}
+
+	td.cell-invisiblellama > img.selected {
+		border-radius: 20px;
+		box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+	}
+
+	#over-invisiblellama{
+		height: 399px;
+	}
 }
