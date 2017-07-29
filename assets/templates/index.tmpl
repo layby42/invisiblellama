@@ -3,41 +3,43 @@
     {{template "_head" .}}
 </head>
 
-<body class="bg-invisiblellama">
-	<nav class="navbar navbar-inverse bg-invisiblellama navbar-invisiblellama">
-		<h1 class="navbar-brand mb-0 mr-0">
-			<button class="btn btn-outline-invisiblellama float-right" onclick="lines.startGame();">New Game</button>
-			<a href="/"><img src="resources/images/il-logo-80.png"/></a>
-		</h1>
-	</nav>
+<body>
+	<div class="container">
+		<header>
+			<h1>
+				<button class="btn-outline-invisiblellama float-right" onclick="lines.startGame();">New Game</button>
+				<a href="/" class="brand-invisiblellama"><img src="resources/images/il-logo-80.png"/></a>
+			</h1>
+		</header>
 
-	<div class="container-fluid">
-	  <noscript>
-	      <div class='alert alert-invisiblellama'>
-	          <h4 class='alert-heading'>Warning!</h4>
-	          You don't have Javascript enabled. Please enable Javascript to use this site.
-	      </div>
-	  </noscript>
+		<div>
+		  <noscript>
+		      <div class='text-muted'>
+		          <h4 class='alert-heading'>Warning!</h4>
+		          You don't have Javascript enabled. Please enable Javascript to use this site.
+		      </div>
+		  </noscript>
+		</div>
 
-	</div>
-	<div class="container-fluid">
-		{{template "_lines" .}}
-	</div>
+		<div class="container">
+			{{template "_lines" .}}
+		</div>
 
-		<footer class="footer-invisiblellama">
-			<div class="container-fluid">
-				<div clas="container">
-					<div class="row">
-						<div class="col text-muted">
-							&copy; 2008 - {{.year}} Invisible Llama
-						</div>
-						<div class="col col-3 col-md-3 text-right">
-							<a href="http://syrec.io" class="text-muted" target="_blank">Contact</a>
-						</div>
+		<footer>
+			<div class="container">
+				<a href="http://syrec.io" class="text-muted float-right" target="_blank">Contact</a>
+				<div class="text-muted">
+					&copy; 2008 - {{.year}} Invisible Llama
+					<div class="tokens-invisiblellama">
+						{{ range $id, $val := .tokens}}
+							<img src="../resources/images/default/token{{$id}}.png" height=15 width=15 />
+						{{ end }}
 					</div>
 				</div>
 			</div>
 		</footer>
+	</div>
+
 </body>
 
 <script>

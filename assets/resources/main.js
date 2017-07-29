@@ -41,19 +41,19 @@ var lines = (function () {
 	var _score = 0;
 
 	function allTokens() {
-		return $("td.cell-invisiblellama > img");
+		return $("div.cell-invisiblellama > img");
 	}
 
 	function emptyTokens() {
-		return $("td.cell-invisiblellama > img.empty");
+		return $("div.cell-invisiblellama > img.empty");
 	}
 
 	function cellToken(id) {
-		return $("td.cell-invisiblellama > img.token#token-"+id);
+		return $("div.cell-invisiblellama > img.token#token-"+id);
 	}
 
 	function emptyToken(item) {
-		$(item).addClass("empty").removeClass("token").removeClass("selected").prop("src", "../resources/images/empty.png");
+		$(item).addClass("empty").removeClass("token selected").prop("src", "../resources/images/empty.png");
 	};
 
 	function setToken(item, token) {
@@ -248,13 +248,13 @@ var lines = (function () {
 
 (function () {
 	// select
-  $(document).on('click', 'td.cell-invisiblellama > img.token', function(event) {
-  	$("td.cell-invisiblellama > img.token").removeClass("selected");
+  $(document).on('click', 'div.cell-invisiblellama > img.token', function(event) {
+  	$("div.cell-invisiblellama > img.token").removeClass("selected");
     $(this).addClass("selected");
   });
 
   // move
-  $(document).on('click', "td.cell-invisiblellama:has(img.empty)", function(event) {
-  	lines.moveToken($("td.cell-invisiblellama:has(img.token.selected)"), $(this));
+  $(document).on('click', "div.cell-invisiblellama:has(img.empty)", function(event) {
+  	lines.moveToken($("div.cell-invisiblellama:has(img.token.selected)"), $(this));
   });
 })();

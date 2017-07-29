@@ -43,8 +43,9 @@ func registerRoutes() *gin.Engine {
 	r.GET("/", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "index",
 			gin.H{
-				"board": initializeBoard(),
-				"year":  time.Now().Year(),
+				"board":  initializeBoard(),
+				"year":   time.Now().Year(),
+				"tokens": []int64{0, 1, 2, 3, 4, 5, 6},
 			})
 	})
 

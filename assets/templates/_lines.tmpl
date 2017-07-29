@@ -1,19 +1,15 @@
 {{define "_lines"}}
-<div class="board-invisiblellama">
-	<div id="over-invisiblellama" class="text-white">Game is over</div>
+<div id="board-invisiblellama">
+	<div id="over-invisiblellama" class="text-white" onclick="lines.startGame();">Game is over</div>
 	<div id="score-invisiblellama" class="text-white text-right"></div>
-	<table id="table-invisiblellama">
-		<tbody>
+	<div id="grid-invisiblellama">
 			{{ range $y, $row := .board}}
-				<tr class="row-invisiblellama {{if eq $y 0}} top-border {{end}}">
 					{{ range $x, $cell := $row }}
-						<td class="cell-invisiblellama {{if eq $x 0}} left-border {{end}}">
-							<img id="token-{{$cell}}" class="empty" src="../resources/images/empty.png"/>
-						</td>
+						<div class="cell-invisiblellama {{if eq $y 0}} top-border {{end}} {{if eq $x 0}} left-border {{end}}">
+							<img id="token-{{$cell}}" class=" empty" src="../resources/images/empty.png"/>
+						</div>
 					{{ end }}
-				</tr>
 			{{ end }}
-		</tbody>
-	</table>
+	</div>
 </div>
 {{end}}
