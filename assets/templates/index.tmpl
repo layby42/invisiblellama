@@ -8,7 +8,7 @@
 		<header>
 			<h1>
 				<button class="btn-outline-invisiblellama float-right" onclick="lines.startGame();">New Game</button>
-				<a href="/" class="brand-invisiblellama"><img src="resources/images/il-logo-80.png"/></a>
+				<a href="/" class="brand-invisiblellama"><img src="resources/images/il-logo-80.png" draggable="false"/></a>
 			</h1>
 		</header>
 
@@ -32,7 +32,7 @@
 					&copy; 2008 - {{.year}} Invisible Llama
 					<div class="tokens-invisiblellama">
 						{{ range $id, $val := .tokens}}
-							<img src="../resources/images/default/token{{$id}}.png" height=15 width=15 />
+							<img src="../resources/images/default/token{{$id}}.png" height=15 width=15 draggable="false"/>
 						{{ end }}
 					</div>
 				</div>

@@ -11,7 +11,7 @@ noscript {
 
 header, footer {
     padding: 0.25rem 1rem;
-    color: color: rgb(42, 97, 125);
+    color: rgb(42, 97, 125);
     clear: left;
 }
 
@@ -128,14 +128,19 @@ div.grid-invisiblellama > img.empty {
 }
 
 div.cell-invisiblellama > img.token {
-	border-radius: 27px;
+	border-radius: 30px;
 	height: 54px;
 	width: 54px;
 }
 
 div.cell-invisiblellama > img.token.selected {
-	border-radius: 27px;
-	box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+	border-radius: 30px;
+	border-style: solid;
+	border-color: rgba(255, 255, 255, 0.3);
+	border-width: 1px;
+	height: 52px;
+	width: 52px;
+	box-shadow:0px 0px 10px rgba(255, 255, 255, 0.7);
 }
 
 div#score-invisiblellama {
@@ -168,6 +173,8 @@ div#over-invisiblellama{
 
 	header > h1 > a.brand-invisiblellama > img {
 		height: 27px;
+	    -webkit-user-drag: none;
+	    user-drag: none;
 	}
 
 	footer {
@@ -187,22 +194,33 @@ div#over-invisiblellama{
 		height: 30px;
 		width: 30px;
 		padding: 1px;
+	    -webkit-user-drag: none;
+	    user-drag: none;
 	}
 
 	div.cell-invisiblellama > img.empty {
 		height: 30px;
 		width: 30px;
+	    -webkit-user-drag: none;
+	    user-drag: none;
 	}
 
 	div.cell-invisiblellama > img.token {
-		border-radius: 15px;
+		border-radius: 20px;
 		height: 30px;
 		width: 30px;
+	    -webkit-user-drag: none;
+	    user-drag: none;
 	}
 
 	div.cell-invisiblellama > img.token.selected {
-		border-radius: 15px;
-		box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+		border-radius: 20px;
+		border-style: solid;
+		border-color: rgba(255, 255, 255, 0.3);
+		border-width: 1px;
+		height: 28px;
+		width: 28px;
+		box-shadow:0px 0px 6px rgba(255, 255, 255, 0.7);
 	}
 
 	div#score-invisiblellama {
@@ -257,14 +275,19 @@ div#over-invisiblellama{
 	}
 
 	div.cell-invisiblellama > img.token {
-		border-radius: 15px;
+		border-radius: 20px;
 		height: 30px;
 		width: 30px;
 	}
 
 	div.cell-invisiblellama > img.token.selected {
-		border-radius: 15px;
-		box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+		border-radius: 20px;
+		border-style: solid;
+		border-color: rgba(255, 255, 255, 0.3);
+		border-width: 1px;
+		height: 28px;
+		width: 28px;
+		box-shadow:0px 0px 6px rgba(255, 255, 255, 0.7);
 	}
 
 	div#score-invisiblellama {
@@ -307,14 +330,19 @@ div#over-invisiblellama{
 	}
 
 	div.cell-invisiblellama > img.token {
-		border-radius: 24px;
+		border-radius: 25px;
 		height: 45px;
 		width: 45px;
 	}
 
 	div.cell-invisiblellama > img.token.selected {
-		border-radius: 24px;
-		box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+		border-radius: 25px;
+		border-style: solid;
+		border-color: rgba(255, 255, 255, 0.3);
+		border-width: 1px;
+		height: 43px;
+		width: 43px;
+		box-shadow:0px 0px 10px rgba(255, 255, 255, 0.7);
 	}
 
 	div#over-invisiblellama{

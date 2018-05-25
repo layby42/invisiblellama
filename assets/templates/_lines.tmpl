@@ -6,7 +6,7 @@
 			{{ range $y, $row := .board}}
 					{{ range $x, $cell := $row }}
 						<div class="cell-invisiblellama {{if eq $y 0}} top-border {{end}} {{if eq $x 0}} left-border {{end}}">
-							<img id="token-{{$cell}}" class=" empty" src="../resources/images/empty.png"/>
+							<img id="token-{{$cell}}" class=" empty" src="../resources/images/empty.png" draggable="false"/>
 						</div>
 					{{ end }}
 			{{ end }}

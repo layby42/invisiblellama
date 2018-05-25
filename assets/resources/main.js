@@ -249,8 +249,11 @@ var lines = (function () {
 (function () {
 	// select
   $(document).on('click', 'div.cell-invisiblellama > img.token', function(event) {
+  	var wasSelected = $(this).hasClass("selected");
   	$("div.cell-invisiblellama > img.token").removeClass("selected");
-    $(this).addClass("selected");
+  	if (!wasSelected) {
+    	$(this).addClass("selected");
+  	}
   });
 
   // move
